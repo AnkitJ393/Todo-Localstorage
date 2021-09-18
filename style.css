@@ -1,0 +1,130 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 100vh;
+}
+.wrapper{
+    border: 2px solid black;
+    width: 35%;
+    padding: 25px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.wrapper header{
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+.inputField{
+    width: 100%;
+}
+.inputField input{
+    width: 75%;
+    height: 2rem;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    margin:10px 0;
+    outline: none;
+    padding-left: 10px;
+
+}
+.inputField button{
+    height: 1.8rem;
+    width: 10%;
+    font-size: 20px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 10%;
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: pointer;
+}
+.inputField button.active{
+    opacity: 1;
+    pointer-events:visible;
+}
+
+
+.todolist{
+    list-style-type: none;
+    padding: 10px 0;
+    width: 85%;
+    font-size: large;
+    font-weight: 600;
+    max-height: 350px;
+    overflow-y: auto;
+}
+.todolist li{   
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    text-align:right    ;
+    background-color: rgba(180, 179, 179, 0.212);
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 10px;
+    width: fit-content;
+    overflow:hidden;
+    /* border: 1px solid black; */
+}
+.todolist li span{
+    position:  absolute;
+    right:-33px;
+    padding-top: 5px;
+    background-color: rgb(223, 71, 71);
+    color: rgb(253, 239, 239);
+    width: 10%;
+    text-align: center;
+    height: inherit;
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+}
+.todolist li:hover span{
+    position: absolute;
+    right: 0;
+
+}
+
+footer{
+    width: 85%;
+    /* border: 1px solid black; */
+    /* height: 2rem; */
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 2%;
+}
+footer p{
+    display: inline-block;
+    font-size: large;
+    font-weight: 500;
+    color:rgb(77, 75, 75);
+}
+footer button{
+    font-size: clamp(10px,1.2vw,1rem);
+    /* padding: 10px; */
+    width: 25%;
+    background-color:aqua ;
+    border: none;
+    margin-left: 50px;
+    outline: none;
+    border-radius: 5px;
+    cursor:pointer;
+    height: 2rem;
+    opacity: 0.6;
+    pointer-events: none;
+
+}
+footer button.begin{
+    opacity: 1;
+    pointer-events: visible;
+}
